@@ -68,3 +68,18 @@ leituras.forEach((titulo, i) => {
 const longos = leituras.filter(t => t.length > 10);
 const maiusculas = leituras.map(t => t.toUpperCase());
 console.log(longos, maiusculas);
+
+for (const l of catalogo) {
+console.log(`${l.titulo} — ${l.autor} (${l.ano})`);
+}
+console.log(catalogo.filter(l => l.disponivel).length);
+let antigo = catalogo[0];
+for (const l of catalogo) {
+if (l.ano < antigo.ano) antigo = l;
+}
+function emprestar(titulo) {
+const livro = catalogo.find(l => l.titulo === titulo);
+}
+if (!livro) return "Livro não encontrado.";
+if (!livro.disponivel) return "Já está emprestado.";
+livro.disponivel = false; return "Emprestado!";
