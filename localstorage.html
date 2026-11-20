@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biblioteca do Bairro · localStorage</title>
+  <script src="localstorage.js" defer></script>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 720px; margin: 0 auto; padding: 0 1rem 3rem; line-height: 1.5; background: #fff; color: #111; }
+    body.escuro { background: #1e1e24; color: #eee; }
+    #faixa { background: #fbc72d; color: #111; padding: .75rem 1rem; margin: 0 -1rem 1rem; }
+    #faixa[hidden] { display: none; }
+    li.lido span { text-decoration: line-through; opacity: .6; }
+    li button { margin-left: .5rem; cursor: pointer; }
+    section { border-top: 1px solid #8884; padding-top: 1rem; margin-top: 1.5rem; }
+  </style>
+</head>
+<body>
+  <!-- Ex. 9: a faixa começa escondida -->
+  <div id="faixa" hidden>
+    Novidade: sala infantil aberta!
+    <button id="fecharFaixa" type="button">Fechar</button>
+  </div>
+
+  <h1>Biblioteca do Bairro · localStorage</h1>
+  <p id="saudacao"></p>
+  <ul id="listaGeneros"></ul>
+
+  <section>
+    <h2>Ex. 3 · Contador de visitas</h2>
+    <p id="contador"></p>
+    <button id="recomecar" type="button">Recomeçar</button>
+  </section>
+
+  <section>
+    <h2>Ex. 7 · Tema</h2>
+    <button id="botaoTema" type="button" aria-pressed="false">Alternar tema</button>
+    <button id="seguirSistema" type="button">Seguir o sistema</button>
+  </section>
+
+  <section>
+    <h2>Ex. 8 e 10 · Lista de leitura</h2>
+    <p><small>Abre esta página em dois separadores e muda a lista num deles.</small></p>
+    <form id="formLeitura">
+      <input id="novoTitulo" placeholder="Título a ler" aria-label="Título a ler">
+      <button type="submit">Adicionar</button>
+    </form>
+    <ul id="lista"></ul>
+  </section>
+
+  <section>
+    <h2>Ex. 11 · Últimas pesquisas</h2>
+    <form id="formPesquisa">
+      <input id="termo" type="search" placeholder="Pesquisar…" aria-label="Pesquisar">
+      <button type="submit">Pesquisar</button>
+    </form>
+    <ul id="listaPesquisas"></ul>
+  </section>
+</body>
+</html>

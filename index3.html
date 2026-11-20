@@ -4,11 +4,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Biblioteca do Bairro</title>
+  <script src="src.js" defer></script>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 720px; margin: 2rem auto; padding: 0 1rem; line-height: 1.5; }
+    body.escuro { background: #1e1e24; color: #eee; }
+    .indisponivel { color: #999; text-decoration: line-through; }
+    .favorito { color: #c0392b; }
+    li button { margin-left: .5rem; cursor: pointer; }
+    #mensagem { font-weight: bold; }
+  </style>
 </head>
 <body>
   <h1>Biblioteca do Bairro</h1>
-  <p>Abre a consola (F12 › Console) para ver os resultados.</p>
+  <p>Abre a consola (F12 › Console) para ver os resultados dos exercícios 1 a 6.</p>
+  <p><small>Para o exercício 9 (fetch) abre esta página com o Live Server, não com duplo clique.</small></p>
 
-  <script src="src.js"></script>
+  <button id="botaoTema" aria-pressed="false">Modo escuro</button>
+
+  <h2 id="resumo"></h2>
+  <input id="pesquisa" type="search" placeholder="Pesquisar título…" aria-label="Pesquisar título">
+  <button id="botao">Só disponíveis</button>
+  <ul id="lista"></ul>
+
+  <h2>Inscrição</h2>
+  <form id="formulario" novalidate>
+    <p><label>Nome <input id="nome-inscricao" name="nome" required></label></p>
+    <p><label>Email <input id="email-inscricao" name="email" type="email" required></label></p>
+    <button type="submit">Inscrever</button>
+    <p id="mensagem" role="status"></p>
+  </form>
 </body>
 </html>
